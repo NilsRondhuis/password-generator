@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Password Generator</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+      integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <nav class="nav">
+          <a href="" class="logo">
+            <img src="./images/logo.png" alt="Logo" />
+          </a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <h1 class="title">Password Generator</h1>
+        </section>
+        <section class="section">
+          <p class="text">
+            Даний генератор не зберігає паролі в базу даних та не відправляє
+            дані третім особам. Користуйтеся ним для створення надійних паролів
+            які тяжко зламати та здогадатися. Виберіть критерії які вам потрібні
+            для пароля.
+          </p>
+
+          <form class="form-pass">
+            <label class="label-pass">
+              <input class="input-pass" type="text" name="pass" />
+              <button class="form-btn" type="submit">Згенерувати</button>
+              <button class="copy-btn" type="button">Скопіювати</button>
+            </label>
+            <label class="label-setting">
+              <span class="label">Включити верхній регістр букв (A-Z):</span>
+              <input
+                class="checkbox visually-hidden"
+                type="checkbox"
+                name="setting"
+                checked
+              />
+              <span class="icon"></span>
+            </label>
+            <label class="label-setting">
+              <span class="label">Включити нижній регістр букв (a-z):</span>
+              <input
+                class="checkbox visually-hidden"
+                type="checkbox"
+                name="setting"
+                checked
+              />
+              <span class="icon"></span>
+            </label>
+            <label class="label-setting">
+              <span class="label">Включити цифри (0-9):</span>
+              <input
+                class="checkbox visually-hidden"
+                type="checkbox"
+                name="setting"
+              />
+              <span class="icon"></span>
+            </label>
+            <label class="label-setting">
+              <span class="label">Включити спеціальні символи:</span>
+              <input
+                class="checkbox visually-hidden"
+                type="checkbox"
+                name="setting"
+              />
+              <span class="icon"></span>
+            </label>
+            <label class="label-setting">
+              <span class="label">Довжина паролю:</span>
+              <input
+                type="number"
+                name="number"
+                min="8"
+                max="120"
+                step="1"
+                value="8"
+              />
+            </label>
+          </form>
+        </section>
+      </main>
+      <footer class="footer">
+        <p class="copy">
+          &copy; Password Generator <span class="current-year"></span>
+        </p>
+      </footer>
+    </div>
+    <script type="module" src="./js/generate-password.js"></script>
+    <script type="module" src="./js/copy-password.js"></script>
+    <script type="module" src="./js/current-year.js"></script>
+  </body>
+</html>
