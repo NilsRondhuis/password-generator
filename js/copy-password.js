@@ -4,6 +4,19 @@ const refs = {
   btnCopy: document.querySelector(".copy-btn"),
 };
 
+const colors = [
+  "#FFFFFF",
+  "#000000",
+  "#FF0000",
+  "#00FF00",
+  "#0000FF",
+  "#FFFF00",
+  "#FF00FF",
+  "#00FFFF",
+  "#FFA500",
+  "#800080",
+];
+
 refs.btnCopy.addEventListener("click", copyPassword);
 
 function copyPassword() {
@@ -27,16 +40,21 @@ function copyPassword() {
   } else {
     navigator.clipboard
       .writeText(inputPass.value)
-      .then(() => isShowMessage(title))
+      .then(() => isShowMessage(title, colors))
       .catch((err) => console.log(err));
   }
 }
 
-function isShowMessage(title) {
-  const red = Math.round(Math.random() * (255 - 1) + 1);
-  const green = Math.round(Math.random() * (255 - 1) + 1);
-  const blue = Math.round(Math.random() * (255 - 1) + 1);
+function isShowMessage(title, colors) {
+  const currentColor = Math.round(Math.random() * (colors.length - 1) + 1);
 
-  title.style.color = `rgb(${red}, ${green}, ${blue})`;
-  title.textContent = "Password Copied";
+  // const red = Math.round(Math.random() * (255 - 1) + 1);
+  // const green = Math.round(Math.random() * (255 - 1) + 1);
+  // const blue = Math.round(Math.random() * (255 - 1) + 1);
+
+  // title.style.color = `rgb(${red}, ${green}, ${blue})`;
+
+  title.style.color = colors[currentColor];
+
+  title.textContent = "Password Copied!";
 }

@@ -28,12 +28,12 @@ function createSettings(elements) {
   let data = {};
 
   if (lettersUpper.checked) {
-    data.lettersLowerCase = lettersUpper.checked;
-  } else data.lettersLowerCase = lettersUpper.checked;
+    data.lettersUpperCase = lettersUpper.checked;
+  } else data.lettersUpperCase = lettersUpper.checked;
 
   if (lettersLower.checked) {
-    data.lettersUpperCase = lettersLower.checked;
-  } else data.lettersUpperCase = lettersLower.checked;
+    data.lettersLowerCase = lettersLower.checked;
+  } else data.lettersLowerCase = lettersLower.checked;
 
   if (numbers.checked) {
     data.numbers = numbers.checked;

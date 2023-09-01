@@ -35,6 +35,7 @@ p {
 
 .container {
   max-width: 100%;
+  height: 100vh;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -75,8 +76,9 @@ p {
   text-align: center;
   background-image: linear-gradient(
       90deg,
-      rgba(3, 3, 3, 0.7) 0%,
-      rgba(3, 3, 3, 0.7) 100%
+      rgba(255, 255, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.2) 50%,
+      rgba(255, 255, 255, 0.2) 100%
     ),
     url(../images/hero-bg.png);
   background-size: cover;
@@ -89,8 +91,9 @@ p {
   .hero {
     background-image: linear-gradient(
         90deg,
-        rgba(3, 3, 3, 0.7) 0%,
-        rgba(3, 3, 3, 0.7) 100%
+        rgba(255, 255, 255, 0.2) 0%,
+        rgba(255, 255, 255, 0.2) 50%,
+        rgba(255, 255, 255, 0.2) 100%
       ),
       url(../images/hero-bg@2x.png);
   }
@@ -98,6 +101,8 @@ p {
 
 .title {
   font-size: 28px;
+  letter-spacing: 2px;
+  font-weight: 700;
   color: white;
 }
 
