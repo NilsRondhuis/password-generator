@@ -14,7 +14,6 @@ const colors = [
   "#FF00FF",
   "#00FFFF",
   "#FFA500",
-  "#800080",
 ];
 
 refs.btnCopy.addEventListener("click", copyPassword);
